@@ -1,0 +1,40 @@
+---
+dog:
+  position: outside
+  level: 70
+cat:
+  position: middle
+  level: 70
+bear:
+  position: middle
+  level: 60
+lion:
+  position: setter
+  level: 85
+fox:
+  position: setter
+  level: 85
+eagle:
+  position: outside
+  level: 80
+snake:
+  position: middle
+  level: 70
+frog:
+  position: middle
+  level: 85
+rabbit:
+  position: outside
+  level: 90
+kangaroo:
+  position: opposite
+  level: 80
+cow:
+  position: opposite
+  level: 70
+horse:
+  position: outside
+  level: 70
+chicken:
+  position: libero
+  level: 70
