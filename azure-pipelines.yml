@@ -32,5 +32,5 @@ steps:
 
 - script: |
     pip install pyinstaller
-    pyinstaller -F --paths=.\Lib\site-packages  teams.py
+    pyinstaller -F --paths=.\Lib\site-packages --specpath=build.spec  teams.py
   displayName: 'create python program'
