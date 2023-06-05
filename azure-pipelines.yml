@@ -9,10 +9,6 @@ trigger:
 pool: myCompAgent
 strategy:
   matrix:
-    Python27:
-      python.version: '2.7'
-    Python35:
-      python.version: '3.5'
     Python36:
       python.version: '3.6'
     Python37:
@@ -33,3 +29,8 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- script: |
+    pip install pyinstaller
+    pyinstaller -F --paths=.\Lib\site-packages  teams.py
+  displayName: 'create python program'
