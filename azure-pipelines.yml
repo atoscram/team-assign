@@ -9,10 +9,6 @@ trigger:
 pool: myCompAgent
 strategy:
   matrix:
-    Python27:
-      python.version: '2.7'
-    Python35:
-      python.version: '3.5'
     Python36:
       python.version: '3.6'
     Python37:
@@ -33,3 +29,10 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- task: TwineAuthenticate@1
+  inputs:
+    artifactFeed: 'atoscram'
+
+- script: |
+   twine upload -r "atoscram" --config-file $(PYPIRC_PATH) <package path/files>
