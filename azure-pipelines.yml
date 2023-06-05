@@ -30,9 +30,10 @@ steps:
     pytest
   displayName: 'pytest'
 
-- task: TwineAuthenticate@1
-  inputs:
-    artifactFeed: 'atoscram'
-
 - script: |
-   twine upload -r "atoscram" --config-file $(PYPIRC_PATH) <package path/files>
+    pip install pyinstaller
+    pyinstaller yourprogram.py
+
+    pyinstaller -F yourprogram.py
+    pyinstaller -F --paths=.\Lib\site-packages  yourprogram.py
+  displayName: 'create python program'
